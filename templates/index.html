@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='st.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='res.css')}}"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" >
+
+</head>
+<body>
+ 
+<header>
+    <nav class="navbar navbar-expand-lg navigation-wrap position-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logo" src="{{url_for('static',filename='bg/goa.png')}}" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active hov" aria-current="page" href="#home" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hov" href="#about" style="color: red">About us</a>
+              </li>
+              <li class="nav-item">
+                {% if session.user %}
+                 <a href="/logout" class="nav-link hov" style="color: red">logout</a>
+             {% else %}
+                 <a href="/log" class="nav-link hov" style="color: red">login</a>            
+                  {% endif %}
+              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hov" href="" style="color: red">{{session["user"]}} </a>
+              </li>           
+              <li class="nav-item">
+                <a class="nav-link" href="/cart" style="color: black"><i class="fa-brands fa-shopify shop" style="font-size: 1.8rem;"></i></a>
+              </li>           
+                          
+<li><button class="main-btn"  >1200 345 123</button></li>
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+</header>
+
+<section id="home">
+    <div class="container-fluid px-0 top-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6" >
+
+                    <h1> Beauty is in the eye of the beer holder. </h1>
+                    
+                    <div class="mt-4">
+<a href="/cart"><button class="main-btn">Order Now <i class="fas fa-shopping-basket ps3"></i>  </button></a>
+                        
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="counter">
+<section class="counter-section">
+<div class="container">
+    <div class="row text-center">
+<div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+    <h2><span id="count1"></span>+</h2>
+    <p>SAVINGS</p>
+</div>
+<div class="col-md-3 mb-lg-0 mb-md-0 mb-s">
+    <h2><span id="count2"></span>+</h2>
+    <p>PHOTOS</p>
+</div>
+<div class="col-md-3 mb-lg-0 mb-md-0 mb-s">
+    <h2><span id="count3"></span>+</h2>
+    <p>ROCKETS</p>
+</div>
+<div class="col-md-3 mb-lg-0 mb-md-0 mb-s">
+    <h2><span id="count4"></span>+</h2>
+    <p>GLOBES</p>
+</div>
+    </div>
+</div>
+
+
+</section>
+
+
+</section>
+
+<section id="about">
+<div class="about-section wrapper">
+    <div class="container">
+        <div class="row align-item-center">
+            <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                <div class="card border-0">
+                    <img src="{{url_for('static',filename='img/fani3.jpeg')}}" alt="" class="img-fluid">
+                </div>
+            </div>
+
+<div class="col-lg-5 col-md-12 text-sec">
+<h2 >What is Feni?</h2>
+<p>Feni is a traditional liquor distilled from the fermented juice of cashew apples.It is safe to drink as it is free from organic or artificial flavors. The name "feni" is derived from the Sanskrit word phena which actually means froth. It is due to the fact that bubbles form a light froth when the liquor is shaken in a bottle or poured in a glass. Feni is a part of Goa food tradition from the last 400 years. Unlike other liquors, it doesn’t give you a hangover. It also got the Geographical Indication (GI) certificate in 2009. In 2016, the Goan government initiated the process of declaring it as a heritage drink.  </p>
+<a href="/info"><button class="main-btn mt-4">Learn More</button></a>
+</div>
+ </div>
+</div>
+
+<div class="container drink-type">
+    <div class="row align-items-center">
+        <div class="col-lg-5 col-md-12 text-sec mb-lg-0 mb-5">
+            <h2 >How to Drink Feni?</h2>
+            <p>Feni is an alcoholic spirit that is produced only in Goa, India. It is exported to different parts of the world, including the US. The main types of Feni are made from either coconut sap or cashew apples, and each bottle has an approximately 43-45% alcohol content. There are many ways to enjoy this liquor, such as with ice, neat, with soft drink mixers, or in cocktails. You can also taste Feni at many bars and restaurants in Goa, or at a limited number of cocktail bars in Chicago..  </p>
+<ul class="list-unstyled py-3">
+    <li>Feni has a fruit like flavor and its taste is astringent. </li>
+    <li>The alcohol content in Feni is 43% to 45%.</li>
+    <li>it smells too.</li>
+</ul>
+<a href="/info"><button class="main-btn mt-4">Learn More</button></a>
+        </div>
+<div class="col-lg-7 col-md-12">
+    <div class="card border-0">
+        <img src="{{url_for('static',filename='img/fani2.jpeg')}}" alt="" class="img-fluid">
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+</div>
+</section>
+
+<section id="story">
+<div class="story-section">
+<div class="container">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-content">
+            <h2 style="font-weight: bold; color: black; font-size: 2.5rem;">Effective in many diseases.</h2>
+            <p style="font-weight: bold; color: #43121d;">Feni is used not only for alcohol but for many types of work. Feni is said to be effective for many problems in the mouth including tooth problems, gum inflammation. Many people also believe that feni gives heat to the body and also clears the respiratory system. It is also said to be effective in many diseases related to constipation and stomach. However, only a balanced use of Feni is recommended as a medicine. Excessive use can be harmful.</p>
+           <a href="/info"> <button class="main-btn mt-3">Read More</button></a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="explore-drink">
+<div class="explore-drink-wrapper">
+    <div class="container" >
+        <div class="row" >
+            <div class="col-sm-12">
+                <div class="text-content text-center">
+                    <h2 style="margin-top: 4rem; font-family: cursive;">Explore drinks. </h2>
+                    <p>Bottles of feni dating back to 1950s, glassware used to serve the drink, old wooden dispensers and measuring equipment catch one's eyes during a visit to the one-of-its-kind museum dedicated to the art of brewing the cashew-made liquor in Goa.</p>
+                
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="row pt-5" >
+            {% for i in item %}
+          <div class="col-lg-3 col-md-6 mb-lg mb-5" >
+<div class="card" style="padding: 20px;" >  
+    <img src="{{url_for('static',filename='upl/'+i[4])}}" alt="" class="img-fluid">
+    <div class="pt-3">
+    <h4>{{i[1]}}</h4>
+    <p>{{i[3]}}</p>
+    <span>{{i[2]}} </span>
+    <a href="/cart?id={{i[0]}}" class="mt-4 main-btn">OrderNow</a>
+</div>   
+ </div>
+ </div>
+
+ 
+ {% endfor %}   
+         
+    </div>
+   
+
+    
+</div>
+</div>
+</section>
+
+
+<section id="testimonial">
+<div class="wrapper textimonial-section">
+    <div class="conainer text-center">
+        <div class="text-center pb-4">
+            <h2 style="font-family: cursive; font-weight: bold;">Textimonial</h2></div>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                    <img src="{{url_for('static',filename='bg/person1.jpg')}}"  alt="...">
+                        <p>Feni is used as a cure for tooth problems, swelling and some types ulcers. According to experts, the drink helps in reducing fat when served along with dishes..</p>
+                        <h5>Raj6@_k</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                    <img src="{{url_for('static',filename='bg/pers2.jpg')}}"  alt="...">
+                      <p>
+                        Feni is a traditional liquor distilled from the fermented juice of cashew apples.</p>
+                      <h5>__roy_@99</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                    <img src="{{url_for('static',filename='bg/person3.jpg')}}"  alt="...">
+                   <p>This is much higher than typical rum, which averages around 35%–40% alcohol by volume.</p>
+                   <h5>_k@99_</h5>
+   
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+
+        
+    </div>
+</div>
+
+</section>
+
+<section id="faq">
+<div class="faq wrapper" style="background-color:#43121d;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center pb-4">
+<h2 style="color: whitesmoke; font-family: cursive;">FreQently Asked Question</h2>
+                </div>
+            </div>
+        </div>
+<div class="row pd-5">
+    <div class="col-sm-6 mb-4">
+        <h4 style="color: white;"><span>~</span>What is the type of Feni?</h4>
+        <p style="color: gray;">Especially two types of feni are most popular in Goa. One is Cashew Feni and the other is Coconut Feni. </p>
+
+    </div>
+
+    <div class="col-sm-6 mb-4">
+        <h4 style="color: white;"><span>~</span>How does it taste and how much is alcohol?</h4>
+        <p style="color: gray;"> Feni tastes like fruit and has an astringent taste. </p>
+        
+    </div>
+
+    <div class="col-sm-6 mb-4">
+        <h4 style="color: white;"><span>~</span>What is Feni?</h4>
+        <p style="color: gray;">Feni is a kind of traditional liquor, which is prepared from cashew fruit. </p>
+        
+    </div>
+
+    <div class="col-sm-6 mb-4">
+        <h4 style="color: white;"><span>~</span>How is Feni prepared??</h4>
+        <p style="color: gray;">To prepare Feni, first of all, when the Cashew Apple is ripe, it is broken and crushed. The juice that comes out of this process is stored in earthen or copper vessels. </p>
+        
+    </div>
+</div>
+
+    </div>
+</div>
+</section>
+
+<section id="book-drink">
+<div class="book-drink">
+    <div class="container book-drink-text">
+<div class="row text-center">
+    <div class="col-lg-9 col-md-12">
+        <h2 style="font-weight: bold;font-style: normal; color: yellow;">Baked Fresh daily by anything else ..</h2>
+
+    </div>
+
+    <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+     <a href="/info"><button class="main-btn">Learn More</button></a>
+    </div>
+</div>
+    </div>
+</div>
+
+</section>
+
+<section id="newslettar">
+    <div class="newslettar wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="sol-sm-12">
+                    <div class="text-content text-center pb-4">
+                        <h2 style="color: brown; font-weight: bold; font-family: cursive;">Hurry Up! Subscribe our Newslettar and get 25% off</h2>
+                        <p style="color: gray; font-weight: bold;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsa possi</p></div>
+
+                        <form action="" class="newslettar">
+                            <div class="row">
+                                <div class="col-md-8 col-12">
+                                    <input type="text" class="form-control" placeholder="Email Address here " name="email">
+                                </div>
+                                <div class="col-md-4 col-12">
+                                    <button class="main-btn" type="submit">SubScribe</button>
+                                </div>
+                            </div>
+
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+<div class="footer py-5">
+    <div class="cotainer">
+        <div class="row">
+            <div class="col-md-12 text-center">
+<a href="#" class="footer-link">Register</a>
+<a href="#" class="footer-link">Forum</a>
+<a href="#" class="footer-link">Affiliate</a>
+<a href="#" class="footer-link">FAQ</a>
+<div class="footer-social pt-4 text-center">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-dribble"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+            </div>
+<div class="col-sm-12">
+    <div class="footer-copy">
+        <div class="copy-right text-center pt-5">
+            <p class="text-light">@ 2022.Drinks. All right reserved</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"  ></script>
+
+    <script>
+
+//counter desing
+
+document.addEventListener("DOMContentLoaded",()=>{
+    function counter(id,start,end,duration)
+{
+    let obj=document.getElementById(id),
+    current=start,
+    range=end-start,
+    increment=end>start?1:-1,
+    step=Math.abs[Math.floor(duration / range)],
+    timer=setInterval(()=>{
+current += increment;
+obj.textContent=current
+if(current==end){
+    clearInterval(timer);
+}
+    },step);
+    }
+    counter("count1",0,1156,3000); 
+    counter("count2",100,5156,25000); 
+    counter("count3",0,1452,3000); 
+    counter("count4",0,7156,3000); 
+    })
+
+//active navbar
+let nav=document.querySelector(".navigation-wrap")
+
+window.onscroll=function(){
+    if(document.documentElement.scrollTop >20){
+        nav.classList.add("scroll-on")
+    
+       
+
+    }
+    else{
+        nav.classList.remove("scroll-on")
+    }
+}
+
+//add two cart and delet 
+
+    </script>
+    
+</body>
+</html>

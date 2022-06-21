@@ -1,0 +1,50 @@
+{% extends "nav.html" %}
+
+{% block head %}
+    {{ super() }}
+    
+
+    {% endblock %}
+
+    
+    {% block content %}
+    <div class="container" style="width: 50%; text-align: center; background-color: aliceblue;">
+ 
+   
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>CustomerName</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>ZipCode</th>
+               <th>Date</th>
+               
+                
+              </tr>
+            </thead>
+            <tbody>
+             <tr>
+      {% for i in item %}       
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+<td>{{i[3]}}</td>
+<td>{{i[4]}}</td>
+<td>{{i[5]}}</td>
+<td>{{i[11]}}</td>
+
+
+             </tr>
+
+      {% endfor %}
+            </tbody>
+          </table>
+   
+   
+    </div>
+
+
+    {% endblock %}

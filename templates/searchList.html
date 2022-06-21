@@ -1,0 +1,58 @@
+{% extends "nav.html" %}
+
+{% block head %}
+    {{ super() }}
+    
+
+    {% endblock %}
+
+    
+    {% block content %}
+
+    <div class="container" style="width: 50%; text-align: center; background-color: aliceblue;">
+
+        <form action="/search" method="post">
+            <div class="mb-3">
+              <label for="t1" class="form-label" style="color: red;">Enter any values Search</label><br>
+           <input type="text" name="se" id="t1" style="padding: 5px; width: 50%;">
+           <input type="submit" value="search" class="main-btn">
+           <a href="/showdata" class="main-btn">All</a>
+
+          </form> 
+        </div>
+   
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>img</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+             <tr>
+               {% for i in item %}
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+<td>{{i[3]}}</td>
+<td><img src="{{url_for('static',filename='upl/'+i[4])}}" alt="" style="height: 60px;"></td>
+
+<td><a href="/del?id={{i[0]}}" class="main-btn">Delet</a></td>
+<td><a href="/edit?id={{i[0]}}" class="main-btn">Edit</a></td>
+
+
+             </tr>
+
+             {% endfor %}
+            </tbody>
+          </table>
+   
+   
+    </div>
+
+
+    {% endblock %}

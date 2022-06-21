@@ -1,0 +1,45 @@
+
+{% extends "nav.html" %}
+
+{% block head %}
+    {{ super() }}
+    
+
+  
+
+   
+    {% endblock %}
+    
+    {% block content %}
+<div class="container" style="width: 50%; text-align: center; background-color: aliceblue;">
+    
+    <form action="/alter" method="post" >
+        <div class="mb-3">
+          <label for="proId" class="form-label" style="color: red;">Product Id</label>
+          <input type="text" class="form-control" id="proId" aria-describedby="emailHelp" name="proId" value="{{data1[0]}}">
+ 
+        <div class="mb-3">
+          <label for="proname" class="form-label" style="color: red;">Product name</label>
+          <input type="text" class="form-control" name="proname" value="{{data1[1]}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label" style="color: red;">Price</label>
+            <input type="text" class="form-control" name="price" value="{{data1[2]}}">
+          </div>
+         
+          <div class="mb-3">
+            <label for="desc" class="form-label" style="color: red;">description</label>
+           <textarea name="desc" id="" cols="80" rows="10" value="{{data1[3]}}">{{data1[3]}}</textarea>
+          </div>
+         
+          
+         
+       
+        <button type="submit" class="main-btn">Submit</button>
+      </form>
+        
+
+  </div>
+   
+{% endblock %}

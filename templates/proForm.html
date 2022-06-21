@@ -1,0 +1,49 @@
+
+{% extends "nav.html" %}
+
+{% block head %}
+    {{ super() }}
+    
+
+  
+
+   
+    {% endblock %}
+    
+    {% block content %}
+<div class="container" style="width: 50%; text-align: center; background-color: aliceblue;">
+    
+    <form action="/proform" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="proId" class="form-label" style="color: red;">Product Id</label>
+          <input type="text" class="form-control" id="proId" aria-describedby="emailHelp" name="proId">
+ 
+        <div class="mb-3">
+          <label for="proname" class="form-label" style="color: red;">Product name</label>
+          <input type="text" class="form-control" name="proname">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label" style="color: red;">Price</label>
+            <input type="text" class="form-control" name="price">
+          </div>
+         
+          <div class="mb-3">
+            <label for="desc" class="form-label" style="color: red;">description</label>
+           <textarea name="desc" id="" cols="80" rows="10"></textarea>
+          </div>
+         
+          <div class="mb-3">
+            
+            <input type="file" class="form-control" name="file1" id="file1">
+            <label for="file1" class="form-label" style="color: red;">Upload Pic</label>
+          </div>
+         
+       
+        <button type="submit" class="main-btn">Submit</button>
+      </form>
+        
+
+  </div>
+   
+{% endblock %}

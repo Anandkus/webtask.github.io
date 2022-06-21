@@ -1,0 +1,510 @@
+
+
+/* by default remove botrsratp css remove */
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:active,
+:hover,
+:focus{
+    outline: 0;
+    outline-offset: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none
+}
+ul,
+ul{
+margin: 0;
+padding: 0;
+}
+
+/*   yaha tak */
+
+
+:root{
+    --primary-color:#AB2C4B;
+    --secondary-color:#43121d;
+    --third-color:#F98169;
+    --white-color:#fff;
+    --text-color:#555;
+    --text-grey:#999;
+    --black-color:#000;
+    --primary-font:'Roboto','sans-serif';
+    --secondary-font:'Quicksand','sans-sarif';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+ 
+}
+::-webkit-scrollbar{
+    width: 0.625;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+h1{
+    font-size: 3.6rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    color: var(--white-color);
+    
+ 
+}
+h2{
+    font-weight: 900;
+    font-size: 2.25rem;
+    text-decoration: capitalize;
+    font-family: var(--secondary-font);
+    line-height: 3rem;
+    color: whitesmoke;
+    
+}
+h4{
+    color: var(--secondary-color);
+    font-family: var(--secondary-color);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 02.25rem;
+}
+h5{
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 700;
+}
+p{
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+.main-btn:hover{
+    background-color: transparent;
+    
+    color: green;
+}
+
+.wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 0.25rem;
+
+}
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+.counter-section h2,
+.textimonial-section h2,
+.book-food-text h2{
+    color: var(--white-color);
+}
+
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: var(--white-color);
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9575rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    
+    letter-spacing: 1px;
+}
+
+
+.navigation-wrap .main-btn{
+    padding: 0.3125rem 1.4375rem;
+box-shadow: none;
+margin-left: 0.625rem;
+}
+/* change navbar styling on scrool */
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   background-color: rgb(0 0 0 / 50%);
+    box-shadow: 0 o.125rem 1.75rem 0 rgb(0,0,0,0.09);
+    transition: all .15s ease-out 0s;
+    
+    
+   
+}
+
+.hov:hover{
+    background-color: black;
+    
+}
+.top-banner{
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) ,url(./bg/testimonials-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem;
+    
+
+
+}
+.counter-section{
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+
+}
+.counter-section p{
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.logo{
+    height: 100px;
+    width: 200px;
+}
+.about-section{
+   background-color: #43121d;
+}
+.about-section.card,
+.about-section.card img{
+border-radius: 00.625rem;
+
+
+}
+.about-section .text-sec{
+    padding-left: 2rem;
+}
+.drink-type{
+    padding-top: 3.25rem;
+
+
+}
+.drink-type ul li{
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 30px;
+    position: relative;
+    margin-left: 30px;  
+    font-weight: bold;  
+
+}
+.drink-type ul li::before{
+    position: absolute;
+    left: -2.1875rem;
+   color: var(--primary-color);
+   font-size: 1.25rem;
+   font-family:"Font Awesome 5 Free";
+   content: '\f00c';
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+
+}
+
+.story-section{
+    height: 28.125rem;
+    width: 100%;
+background-color: white;
+    background-size: 100%100%;
+    padding-top: 100px;
+    text-align: center;
+
+}
+.story-section h2{
+    color: var(--primary-color);
+}
+.mid{
+    background:linear-gradient(brown 60%,transparent 70%);
+ 
+
+}
+.explore-drink-wrapper{
+background-image: url(./bg/back.jpg);
+background-size: 100%100%;
+
+ 
+}
+.explore-drink.card{
+    border: none;
+    background-color: transparent;   
+    border-radius: 0.9375rem;
+   
+}
+.explore-drink .card img{
+    border-radius: 0.9375rem;
+    object-fit: cover;
+
+}
+
+.card span{
+    color: red;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid black;
+
+
+}
+.card p{
+    color: blue;
+}
+.card h4{
+    color: #43121d;
+    font-family: cursive;
+}
+
+
+
+.title1{
+    font-weight: bold;
+    margin: 20px;
+
+}
+
+.shop{
+    width: 3%;
+    position: relative;
+    cursor: pointer;
+    
+}
+.shop:before{
+    content: attr(data-count);
+ 
+    color: black;
+   
+   
+    background: red;
+    border-radius: 50%;
+    opacity: 1;
+}
+.sec{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto;
+
+}
+.sec div{
+    width: 22%;
+    height: 10%;
+    background: #f5f5f5;
+    padding: 1%;
+    position: relative;
+
+}
+.im{
+    width: 300px;
+    height: 186px;
+
+}
+.pr{
+    margin: 5px;
+    color: black;
+}
+button{
+    padding: 5px;
+    background: red;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #fafafa;
+    cursor: pointer;
+
+}
+.select{
+    width: 60%;
+    height: 580px;
+    background: #222;
+    position: absolute;
+    top: -1000px;
+    left: 20%;
+    transition: 0.5s;
+    overflow-y: auto;
+    margin: auto;
+}
+.select div{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    padding: 5px;
+    border: 1px solid white;
+    position: relative;
+    margin: 5px auto;
+
+}
+.select div img{
+    width: 300px;
+    height: 100%;
+
+}
+.select div p{
+    padding: 35px;
+    color: white;
+
+}
+.select div h6,
+.select div button{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    color: white;
+
+}
+.select div button{
+    
+    left: 60%;
+    top: 55%;
+  
+
+}
+.select div span{
+    display: none;
+
+}
+.textimonial-section{
+    background-color: var(--primary-color);
+    
+
+}
+.textimonial-section .carousel-item{
+
+    padding: 10rem 3.124rem;
+    background-color: var(--white-color);
+    border-radius: 00.9375rem;
+    text-align: center;
+
+   
+}
+.textimonial-section  .carousel-caption img{
+max-width: 10rem;
+border-radius: 50%;
+padding: 0.3125rem;
+}
+.textimonial-section .carousel-item .carousel-caption p{
+    color: red;
+    font-size: 1.3125rem;
+    line-height: 2.0625rem;
+    padding: 0 11% 0.625rem;
+}
+
+.textimonial-section .carousel-indicator{
+    bottom: -2.8125rem;
+}
+.textimonial-section .carousel-indicator button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+}
+.textimonial-section .carousel-indicator button-active{
+    opacity: 1;
+
+}
+.faq h4 span{
+    color:var(--primary-color);
+    font-size: 1.875rem;
+    margin-right: 0.3125rem;
+    
+}
+.book-drink{
+    width: 100%;
+    background: url(./bg/trans.jpg) no-repeat center;
+    background-size: 100%100%;
+    background-attachment: fixed;
+    background-position: 0.71.9125px;
+    padding: 4.374rem 0;
+}
+/* form control */
+.newslettar{
+    width: 55%;
+    margin:0 auto;
+}
+.newslettar .form-control{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--text-grey);
+    color: var(--black-color);
+    
+}
+.newslettar .form-control:hover,
+.newslettar .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+
+}
+.footer{
+    background-color: var(--primary-color);
+}
+.footer .footer-link{
+ font-size: 1rem;
+ color: var(--white-color);
+ padding: 0 1.875rem;   
+}
+.footer .footer-link a:hover{
+    color: var(--white-color) !important;
+}
+.footer a i{
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 1rem;
+}
